@@ -7,7 +7,7 @@ public class TickDAO {
 	
 	static {
 		dbUrl = System.getenv("DATABASE_URL");
-		dbUrl = dbUrl.replaceAll("postgres://(.*):(.*)@(.*)", "jdbc:postgresql://$3?user=$1&password=$2");
+		dbUrl = dbUrl.replaceAll("postgres://(.*):(.*)@(.*)", "jdbc:postgresql://$3?user="postgres"&password="admin");
 		System.out.println("the jdbc connection string is: " + dbUrl);
 	}
 
